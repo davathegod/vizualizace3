@@ -98,8 +98,9 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
-	}
+	background: url('../images/pozadi.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
