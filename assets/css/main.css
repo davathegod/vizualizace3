@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-	background-image: url('assets/css/images/background.jpg') no-repeat center center fixed;
+	background-image: url('images/background.jpg') no-repeat center center fixed;
 	background-size: cover;
 }
 
