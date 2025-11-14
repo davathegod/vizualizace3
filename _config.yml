@@ -1,3 +1,2 @@
-# _config.yml
 title: PROvizualizace
-theme: minima
+baseurl: ""
