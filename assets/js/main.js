@@ -187,4 +187,37 @@
 				}
 			});
 
+// Mobile menu toggle: show/hide mobile menu and animate hamburger
+(function($) {
+	$(function() {
+		var $toggle = $('#mobile-menu-toggle');
+		var $menu = $('#mobile-menu');
+
+		// Ensure menu is hidden initially
+		$menu.hide();
+
+		$toggle.on('click', function(e) {
+			e.preventDefault();
+			$(this).toggleClass('active');
+			$menu.stop(true, true).slideToggle(200);
+		});
+
+		// Hide menu when a menu link is clicked
+		$menu.on('click', 'a', function() {
+			$menu.stop(true, true).slideUp(200);
+			$toggle.removeClass('active');
+		});
+
+		// Optional: hide menu on ESC
+		$(document).on('keydown', function(e) {
+			if (e.key === 'Escape' || e.keyCode === 27) {
+				if ($menu.is(':visible')) {
+					$menu.stop(true, true).slideUp(150);
+					$toggle.removeClass('active');
+				}
+			}
+		});
+	});
+})(jQuery);
+
 })(jQuery);
