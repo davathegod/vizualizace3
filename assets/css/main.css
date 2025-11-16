@@ -3733,7 +3733,7 @@ input, select, textarea {
 			letter-spacing: 0.25em;
 			line-height: 1.75;
 			outline: 0;
-			padding: 1.35em 0;
+			padding: 1em 0em 1em 0em;
 			position: relative;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -3756,7 +3756,6 @@ input, select, textarea {
 			#sidebar nav a:before {
 				background: #3c2c62;
 			}
-
 			#sidebar nav a:after {
 				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
 				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
