@@ -151,6 +151,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		font-size: 1.1em;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -194,15 +195,15 @@ input, select, textarea {
 			}
 
 	h2 {
-		font-size: 1.75em;
+		font-size: 2.1em;
 	}
 
 	h3 {
-		font-size: 1.1em;
+		font-size: 1.6em;
 	}
 
 	h4 {
-		font-size: 1em;
+		font-size: 1.4em;
 	}
 
 	h5 {
@@ -216,15 +217,15 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		h1 {
-			font-size: 2em;
+			font-size: 2.2em;
 		}
 
 		h2 {
-			font-size: 1.25em;
+			font-size: 1.65em;
 		}
 
 		h3 {
-			font-size: 1em;
+			font-size: 1.3em;
 		}
 
 		h4 {
@@ -1819,7 +1820,7 @@ input, select, textarea {
 		display: inline-block;
 		font-size: 0.6em;
 		font-weight: bold;
-		height: calc(4.75em + 2px);
+		height: calc(5.75em + 7px);
 		letter-spacing: 0.25em;
 		line-height: 4.75em;
 		outline: 0;
@@ -3151,6 +3152,7 @@ input, select, textarea {
 
 		table td {
 			padding: 0.75em 0.75em;
+			font-size: 1.1em;
 		}
 
 		table th {
