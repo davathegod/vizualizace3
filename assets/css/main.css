@@ -2619,13 +2619,29 @@ input, select, textarea {
 			padding-left: 0;
 		}
 
-			ul.alt li {
-				border-top: solid 1px rgba(255, 255, 255, 0.15);
-				padding: 0.5em 0;
-			}
+		/* For very large screens, make .inner span the full viewport width */
+		@media screen and (min-width: 1680px) {
+		    .wrapper > .inner {
+		        width: 100% !important;
+		        max-width: none !important;
+		        margin: 0;
+		        padding-left: 5em;
+		        padding-right: 5em;
+		        box-sizing: border-box;
+		    }
+		}
 
-				ul.alt li:first-child {
-					border-top: 0;
+		/* Also apply full-width .inner for >=1280px */
+		@media screen and (min-width: 1280px) {
+		    .wrapper > .inner {
+		        width: 100% !important;
+		        max-width: none !important;
+		        margin: 0;
+		        padding-left: 4em;
+		        padding-right: 4em;
+		        box-sizing: border-box;
+		    }
+		}
 					padding-top: 0;
 				}
 
@@ -3028,6 +3044,7 @@ input, select, textarea {
 			justify-content: center;
 			width: 50em;
 			-ms-flex: 1;
+			flex: 1;
 		}
 
 			.spotlights > section > .content > .inner {
