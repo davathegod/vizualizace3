@@ -2511,7 +2511,7 @@ input, select, textarea {
 		}
 
 			.icon.major:before {
-				font-size: 1.25em;
+				font-size: 2.25em;
 			}
 
 				.wrapper.style1 .icon.major:before {
@@ -2642,8 +2642,8 @@ input, select, textarea {
 		        box-sizing: border-box;
 		    }
 		}
-					padding-top: 0;
-				}
+					
+				
 
 	dl {
 		margin: 0 0 2em 0;
@@ -3384,7 +3384,7 @@ input, select, textarea {
 			-webkit-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
-			text-align: right;
+			text-align: center;
 		}
 
 			#header > nav > ul {
@@ -3558,7 +3558,7 @@ input, select, textarea {
 			list-style: none;
 			padding-right: 1em;
 			display: flex;
-			flex-direction: row;
+			flex-direction: row-reverse;
 			gap: 0.5em;
 			/* Fluid gap: scales with viewport width between 0.5em and 2em */
 		
@@ -3586,7 +3586,7 @@ input, select, textarea {
 				width: calc(100% + 300px);
 				margin-left: 0px;
 				margin-bottom: 0;
-				text-align: right;
+				text-align: center;
 			}
 			/* Expand the UL leftwards by 300px so it extends under the logo area */
 			#sidebar nav > ul {
@@ -3745,7 +3745,7 @@ input, select, textarea {
 			border: 0;
 			color: rgba(255, 255, 255, 0.35);
 			display: inline-block;
-			font-size: 0.6em;
+			font-size: 0.8em;
 			font-weight: bold;
 			letter-spacing: 0.25em;
 			line-height: 1.75;
@@ -3758,6 +3758,7 @@ input, select, textarea {
 			overflow: hidden;
 			text-overflow: ellipsis;
 			max-width: 12ch;
+			margin-bottom: -0.6em;
 		}
 
 			#sidebar nav a:before, #sidebar nav a:after {
@@ -3844,7 +3845,8 @@ input, select, textarea {
 						display: -moz-flex;
 						display: -webkit-flex;
 						display: -ms-flex;
-						display: flex;
+						display: flex; row-reverse;
+						-moz-flex-direction: row-reverse;
 						height: inherit;
 						line-height: inherit;
 						margin: 0;
@@ -3854,15 +3856,33 @@ input, select, textarea {
 							display: block;
 							height: inherit;
 							line-height: inherit;
-							margin: 0 0 0 2em;
+							margin: 0 ;
 							padding: 0;
 						}
 
-					#sidebar nav a {
-						height: inherit;
-						line-height: inherit;
-						padding: 0;
-					}
+							#sidebar nav a {
+			-moz-transition: color 0.2s ease;
+			-webkit-transition: color 0.2s ease;
+			-ms-transition: color 0.2s ease;
+			transition: color 0.2s ease;
+			border: 0;
+			color: rgba(255, 255, 255, 0.35);
+			display: inline-block;
+			font-size: 0.8em;
+			font-weight: bold;
+			letter-spacing: 0.25em;
+			line-height: 1.75;
+			outline: 0;
+			padding: 1em 0em 1em 0em;
+			position: relative;
+			text-decoration: none;
+			text-transform: uppercase;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 12ch;
+			margin-bottom: -1.1em;
+		}
 
 						#sidebar nav a:after {
 							background-image: none;
@@ -4109,5 +4129,10 @@ input, select, textarea {
 		margin-top: 0;
 	}
 }
-
-
+@media screen and (max-width: 980px) {
+	.footer-wrapper {
+	height: 100vh !important;
+	top: 0px !important;
+	        padding-top: 8em !important;
+}
+}
