@@ -3556,7 +3556,7 @@ input, select, textarea {
 
 		#sidebar nav > ul {
 			list-style: none;
-			padding-right: 1em;
+			margin-right: 3em;
 			display: flex;
 			flex-direction: row-reverse;
 			gap: 0.5em;
@@ -3757,7 +3757,7 @@ input, select, textarea {
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			max-width: 12ch;
+			max-width: 15ch;
 			margin-bottom: -0.6em;
 		}
 
@@ -3849,7 +3849,7 @@ input, select, textarea {
 						-moz-flex-direction: row-reverse;
 						height: inherit;
 						line-height: inherit;
-						margin: 0;
+						margin-right: 2em;
 					}
 
 						#sidebar nav ul li {
@@ -3880,7 +3880,7 @@ input, select, textarea {
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			max-width: 12ch;
+			max-width: 15ch;
 			margin-bottom: -1.1em;
 		}
 
