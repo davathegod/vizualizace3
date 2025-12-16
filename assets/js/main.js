@@ -10,6 +10,24 @@
 		$body = $('body'),
 		$sidebar = $('#sidebar');
 
+	// Scrolly offset function.
+		var scrollyOffset = function() {
+
+			// If <=large, >small, and sidebar is present, use its height as the offset.
+				if (breakpoints.active('<=large')
+				&&	!breakpoints.active('<=small')
+				&&	$sidebar.length > 0)
+					return $sidebar.height();
+
+			// For small screens, offset by the height of the mobile menu toggle.
+			if (breakpoints.active('<=small'))
+				return -$('#mobile-menu-toggle').outerHeight();
+
+			// Offset by -50px to create 50px gap above the target.
+			return 50;
+
+		};
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -113,22 +131,6 @@
 
 		}
 
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() {
-
-				// If <=large, >small, and sidebar is present, use its height as the offset.
-					if (breakpoints.active('<=large')
-					&&	!breakpoints.active('<=small')
-					&&	$sidebar.length > 0)
-						return $sidebar.height();
-
-				return 0;
-
-			}
-		});
-
 	// Spotlights.
 		$('.spotlights > section')
 			.scrollex({
@@ -196,6 +198,15 @@
 		// Ensure menu is hidden initially
 		$menu.hide();
 
+		// Add scrolly class to mobile menu links
+		$menu.find('a').addClass('scrolly');
+
+		// Initialize scrolly for the new elements
+		$('.scrolly').scrolly({
+			speed: 1000,
+			offset: scrollyOffset
+		});
+
 		$toggle.on('click', function(e) {
 			e.preventDefault();
 			$(this).toggleClass('active');
@@ -219,5 +230,11 @@
 		});
 	});
 })(jQuery);
+
+	// Scrolly.
+		$('.scrolly').scrolly({
+			speed: 1000,
+			offset: scrollyOffset
+		});
 
 })(jQuery);

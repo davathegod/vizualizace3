@@ -1812,7 +1812,7 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease;
 		transition: border-color 0.2s ease;
 		background-color: transparent;
-		border: solid 1px !important;
+		border: solid 2.5px !important;
 		border-color: rgb(0, 0, 0) !important;
 		border-radius: 3em;
 		color: #ffffff !important;
@@ -1895,7 +1895,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			background-color: #ffffff;
-			color: #312450 !important;
+			color: #0814b9 !important;
 		}
 
 			input[type="submit"].primary:after,
@@ -1925,7 +1925,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: rgba(255, 255, 255, 0.55) !important;
+			border-color: #0814b9 !important;
 		}
 
 			input[type="submit"]:hover:after,
@@ -3136,22 +3136,37 @@ input, select, textarea {
 	}
 
 	table {
-		margin: 0 0 2em 0;
+		margin: 0em 4em 2em 0em;
 		width: 100%;
+		border-collapse: collapse;
 	}
 
 		table tbody tr {
-			border: solid 1px rgb(0, 0, 0);
-			border-left: 0;
-			border-right: 0;
+			border-bottom: 0.8px solid rgba(0, 0, 0, 0.637);
 		}
+
+			table tbody tr.category {
+				border-bottom: 2.2px solid  rgba(0, 0, 0, 0.637);
+			}
+
+				table tbody tr.no-thick-bottom {
+					border-bottom:  0.8px solid rgba(0, 0, 0, 0.637);
+				}
+
+				table tbody tr.thick-top {
+					border-top: 2.2px solid rgba(0, 0, 0, 0.637);
+				}
+
+				table tbody tr.category:first-of-type {
+					border-top: 2.2px solid rgba(0, 0, 0, 0.637);
+				}
 
 			table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(255, 255, 255, 0.05);
 			}
 
 		table td {
-			padding: 0.75em 0.75em;
+			padding: 0.35em 0.35em;
 			font-size: 1.1em;
 		}
 
@@ -3789,7 +3804,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:hover {
-				color: rgba(255, 255, 255, 0.55);
+				color: #684da9;
 			}
 
 			#sidebar nav a.active {
