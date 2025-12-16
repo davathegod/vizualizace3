@@ -35,12 +35,12 @@
             </div>
             <nav id="mobile-menu">
                 <ul>
-                    <li><a href="#one">služby</a></li>
-                    <li><a href="#two">ceník</a></li>
-                    <li><a href="#three">o nás</a></li>
+                    <li><a href="index.html#one">služby</a></li>
+                    <li><a href="index.html#two">ceník</a></li>
+                    <li><a href="index.html#three">o nás</a></li>
 
-                    <!-- <li><a href="#portfolio">portfolio</a></li> -->
-                    <li><a href="#four">kontakt</a></li>
+                    <!-- <li><a href="index.html#portfolio">portfolio</a></li> -->
+                    <li><a href="index.html#four">kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -178,6 +178,92 @@
             </ul>
         </div>
     </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contact-form");
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        if (response.ok) {
+          alert("Zpráva byla úspěšně odeslána.");
+          form.reset();
+        } else {
+          alert("Došlo k chybě. Zkuste to prosím znovu.");
+        }
+      });
+    });
+  </script>
+  <!-- AOS JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 550, // trvání animace v ms
+      once: false,  // animace se spustí jen jednou
+      mirror: true
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) bude spuštěn až po souhlasu -->
+  <script>
+    function loadGA() {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-S57JWNMEVR";
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-S57JWNMEVR');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("cookieConsent") === "accepted") {
+        loadGA();
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const popup = document.getElementById("cookie-popup");
+
+      // zobraz popup jen pokud už uživatel nesouhlasil
+      if (!localStorage.getItem("cookieConsent")) {
+        popup.style.display = "block";
+      }
+
+      document.getElementById("cookie-accept").onclick = () => {
+        localStorage.setItem("cookieConsent", "accepted");
+        popup.style.display = "none";
+        loadGA(); // spustí GA až po souhlasu
+      };
+
+      document.getElementById("cookie-decline").onclick = () => {
+        localStorage.setItem("cookieConsent", "declined");
+        popup.style.display = "none";
+      };
+    });
+  </script>
+
 </body>
 
 </html>

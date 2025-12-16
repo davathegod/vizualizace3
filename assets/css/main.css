@@ -3862,7 +3862,7 @@ input, select, textarea {
 						display: -moz-flex;
 						display: -webkit-flex;
 						display: -ms-flex;
-						display: flex; row-reverse;
+						display: flex;
 						-moz-flex-direction: row-reverse;
 						height: inherit;
 						line-height: inherit;
@@ -4152,4 +4152,7 @@ input, select, textarea {
 	top: 0px !important;
 	        padding-top: 8em !important;
 }
+}
+#porfolio  {
+	display: none !important;
 }
