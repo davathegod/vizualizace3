@@ -110,16 +110,16 @@
 
           if (scrollLeft < imageWidth / 2) {
             // First image (exteriér)
-            exteriorButton.style.opacity = '1';
-            interiorButton.style.opacity = '0.6';
+            exteriorButton.style.opacity = '1.5'; 
+            interiorButton.style.opacity = '0.5';
           } else if (scrollLeft < imageWidth * 1.5) {
             // Second image (interiér)
-            exteriorButton.style.opacity = '0.6';
+            exteriorButton.style.opacity = '0.5';
             interiorButton.style.opacity = '1';
           } else {
             // Other images
-            exteriorButton.style.opacity = '0.6';
-            interiorButton.style.opacity = '0.6';
+            exteriorButton.style.opacity = '0.5';
+            interiorButton.style.opacity = '0.5';
           }
         }
 
