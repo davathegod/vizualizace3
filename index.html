@@ -53,26 +53,91 @@
     </div>
   </header>
 
+
+  
   <!-- Intro -->
-  <section id="intro" class="wrapper style1 fullscreen fade-up"
-    style="background-image: url('images/pokoj.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
-    <!-- <div class="inner">
-      <ul style="text-align: center;color: #3d22b0; list-style: none; padding: 0; margin: 0;">	    
-     <li> <a data-aos="fade-left"  href="#portfolio1" style="font-size: 1.75em"  >NÁVRHY INTERIÉRU A EXTERIÉRU</a>	</li>    
-     <li> <a data-aos="fade-right"  href="#portfolio2" style="font-size: 1.75em" >3D VIZUALIZACE</a> </li> 
-     <li> <a data-aos="fade-up"  href="#portfolio3" style="font-size: 1.75em" >ANIMACE</a> </li> 
-  							</ul>
-    </div>-->
+  <section id="intro" class="wrapper style1 fullscreen fade-up">
+    <style>
+      .carousel-container {
+        position: relative;
+        overflow: visible;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .carousel-track {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        white-space: nowrap;
+        height: 100%;
+        align-items: center;
+      }
+
+      .carousel-track::-webkit-scrollbar {
+        display: none;
+      }
+
+      .carousel-track img {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+    
+
+      
+    </style>
+    <div class="carousel-container">
+     
+      <div class="carousel-track" id="introCarousel">
+        <img src="images/pokoj.webp"  id="exteriér" />
+        <img src="images/pokoj1.webp" id="interiér" />
+      </div>
+
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('introCarousel');
+        const exteriorButton = document.querySelector('a[href="#exteriér"]');
+        const interiorButton = document.querySelector('a[href="#interiér"]');
+
+        function updateButtonOpacity() {
+          const scrollLeft = track.scrollLeft;
+          const imageWidth = window.innerWidth; // since width 100vw
+
+          if (scrollLeft < imageWidth / 2) {
+            // First image (exteriér)
+            exteriorButton.style.opacity = '1';
+            interiorButton.style.opacity = '0.6';
+          } else if (scrollLeft < imageWidth * 1.5) {
+            // Second image (interiér)
+            exteriorButton.style.opacity = '0.6';
+            interiorButton.style.opacity = '1';
+          } else {
+            // Other images
+            exteriorButton.style.opacity = '0.6';
+            interiorButton.style.opacity = '0.6';
+          }
+        }
+
+        track.addEventListener('scroll', updateButtonOpacity);
+        updateButtonOpacity(); // initial call
+      });
+    </script>
   </section>
+
+
 
 
   <!-- Buttons -->
   <section id="buttons" class="wrapper style1" style="position: absolute; top: 85%; left: 50%; transform: translate(-50%, -50%); z-index: 10 ; background-color: transparent;">
     <div class="inner">
       <ul class="actions" style="justify-content: center;">
-        <li><a href="#one" class="button" style="background-color: #3c23adbe; color: white;">služby</a></li>
-        <li><a href="#two" class="button" style="background-color: #3c23adbe; color: rgb(238, 220, 220);">ceník</a></li>
-        <li><a href="#three" class="button" style="background-color: #3c23adbe; color: rgb(238, 220, 220);">o nás</a></li>
+        <li><a href="#exteriér" class="button" style="background-color: #3c23ad79; color: white;">exteriér</a></li>
+        <li><a href="#interiér" class="button" style="background-color: #3c23ad79; color: rgb(255, 255, 255);">interiér</a></li>
       </ul>
     </div>
   </section>
@@ -614,7 +679,7 @@
               <ul class="actions">
                 <li>
                   <button data-aos="fade-right" class="button submit" type="submit"
-                    style="color: black !important; background: transparent !important; border: 2px solid black; font-size: 0.8em;">
+                    style="color: black !important; background: transparent !important; border: 2px solid rgb(0, 0, 0); font-size: 0.8em;">
                     Odeslat
                   </button>
                 </li>
@@ -627,7 +692,7 @@
               <li>
                 <h3 style="color:#6ebe59;">Email</h3>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=provizualizace@gmail.com" target="_blank"
-                  rel="noopener noreferrer" style="font-size: 1.3em; color:black">
+                  rel="noopener noreferrer" style="font-size: 1.3em; color:black; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'">
                   provizualizace@gmail.com
                 </a>
               </li>
@@ -641,8 +706,8 @@
               <li>
                 <h3 style="color: #79e145; font-size: 1.3em;">Socialní sítě</h3>
                 <ul class="icons">
-                  <li><a style="font-size:50px; color:black" class="icon brands fa-instagram"
-                      href="https://www.instagram.com/provizualizace?igsh=ZDY1c2dhMncwNW5p" target="_blank"><span
+                  <li><a style="font-size:50px; color:black; transition: color 0.3s;" class="icon brands fa-instagram"
+                      href="https://www.instagram.com/provizualizace?igsh=ZDY1c2dhMncwNW5p" target="_blank" onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'"><span
                         class="label">Instagram</span></a></li>
                 </ul>
               </li>
