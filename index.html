@@ -214,8 +214,8 @@
       <div class="inner">
         <h2 style="color: #48459c;">CENÍK</h2>
 
-        <p style="color:black; padding-bottom: 3em">Ceník všech našich služeb. každá jednotlivá vizualizace místnosti je naceněna včetně 5
-          návrhů barevného ladění a 5
+        <p style="color:black; padding-bottom: 3em">Ceník všech našich služeb. každá jednotlivá vizualizace místnosti je naceněna včetně 2
+          návrhů barevného ladění a 2
           úprav dispozice nábytku. <br>
           Cena je pouze orientační a může se změnit podle náročnosti zakázky nebo množství
           návrhů. <br>Při objednávce více místností nabízíme slevy. V případě zájmu o konkrétní vizualizace cena
@@ -698,9 +698,9 @@
               </li>
               <li>
                 <h3 style="color: #72cc51; font-size: 1.3em;">Telefon</h3>
-                <span style="font-size: 1.3em; color:black"> 722 411 430 - Dvořák David</span> <br>
+                <span style="font-size: 1.3em; color:black"> 722 411 430 - David Dvořák</span> <br>
 
-                <span style="font-size: 1.3em; color:black"> 774 664 537 - Koten Adam</span>
+                <span style="font-size: 1.3em; color:black"> 774 664 537 - Adam Koten</span>
               </li>
 
               <li>
@@ -723,7 +723,7 @@
 
   <!-- Footer -->
   <footer id="footer"
-    style="background: black; padding: 3em 1.5em; padding-left:20px; text-align: left; color: white; font-size: 1.3em;">
+    style="background: black; padding: 2.5em 1.5em; padding-left: 3em; text-align: left; color: white; font-size: 1.3em;">
     <div class="inner">
       <ul class="menu" style="list-style: none; padding: 0; margin: 0; color: #EDE1E1;">
         <li>© PROvizualizace. All rights reserved.</li>
@@ -889,8 +889,10 @@
     document.addEventListener("DOMContentLoaded", () => {
       const popup = document.getElementById("cookie-popup");
 
-      // zobraz popup vždy
-      popup.style.display = "block";
+ // zobraz popup jen pokud už uživatel nesouhlasil
+      if (!localStorage.getItem("cookieConsent")) {
+        popup.style.display = "block";
+      }
 
       document.getElementById("cookie-accept").onclick = () => {
         localStorage.setItem("cookieConsent", "accepted");
