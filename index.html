@@ -761,7 +761,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #1a1a1a;
+  background: #1a1a1a77;
   color: white;
   padding: 0px 30px;
   display: none;
@@ -779,7 +779,7 @@
     align-items: center;
     flex-wrap: wrap;
   ">
-      <div style="max-width: 70%;padding-top: 1em;">
+      <div style="max-width: 80%;padding-top: 1em; ">
         <strong style="font-size: 1.1em;">Tento web používá cookies</strong><br>
         <span style="font-size: 0.95em;">
           Používáme cookies pro analýzu návštěvnosti a zlepšení služeb.
@@ -790,20 +790,20 @@
         <button id="cookie-accept" style="
         background: #4caf50;
         border: none;
-        padding: 10px 25px;
+        padding: 4px 15px 4px 15px;
         color: white;
-        font-size: 1em;
+        font-size: 0.8em;
         border-radius: 5px;
         cursor: pointer;
-        margin-right: 10px;
+        margin-right: 5px;
       ">Souhlasím</button>
 
         <button id="cookie-decline" style="
         background: #777;
         border: none;
-        padding: 10px 25px;
+        padding: 4px 15px 4px 15px;
         color: white;
-        font-size: 1em;
+        font-size: 0.8em;
         border-radius: 5px;
         cursor: pointer;
       ">Odmítám</button>
@@ -812,6 +812,15 @@
 
   </div>
 
+
+  <style>
+    @media screen and (max-width: 768px) {
+      #cookie-popup {
+        bottom: 0 !important;
+        height: 175px !important;
+      }
+    }
+  </style>
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
@@ -880,10 +889,8 @@
     document.addEventListener("DOMContentLoaded", () => {
       const popup = document.getElementById("cookie-popup");
 
-      // zobraz popup jen pokud už uživatel nesouhlasil
-      if (!localStorage.getItem("cookieConsent")) {
-        popup.style.display = "block";
-      }
+      // zobraz popup vždy
+      popup.style.display = "block";
 
       document.getElementById("cookie-accept").onclick = () => {
         localStorage.setItem("cookieConsent", "accepted");
