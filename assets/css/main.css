@@ -1820,11 +1820,11 @@ input, select, textarea {
 		display: inline-block;
 		font-size: 1.3em;
 		font-weight: bold;
-		height: calc(3.75em + 7px);
+		height: calc(2.75em);
 		letter-spacing: 0.25em;
-		line-height: 3.75em;
+		line-height: 2.75em;
 		outline: 0;
-		padding: 0 3.75em;
+		padding: 0 2.75em;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
@@ -1955,6 +1955,11 @@ input, select, textarea {
 				.button:hover:active:after {
 					opacity: 0.1;
 				}
+
+/* Custom styles for intro buttons */
+#buttons .button:hover {
+	border-color: black !important;
+}
 
 /* Features */
 
