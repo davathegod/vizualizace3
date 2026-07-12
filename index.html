@@ -214,12 +214,11 @@
       <div class="inner">
         <h2 style="color: #3c23adff;">CENÍK</h2>
 
-        <p style="color:black; padding-bottom: 3em">Ceník všech našich služeb, každá jednotlivá vizualizace místnosti je naceněna včetně 2
+        <p style="color:black; padding-bottom: 3em">Každá jednotlivá vizualizace místnosti je naceněna včetně 2
           návrhů barevného ladění a 2
           úprav dispozice nábytku. <br>
-          Cena je pouze orientační a může se změnit podle náročnosti zakázky nebo množství
-          návrhů. <br>Při objednávce více místností nabízíme slevy. V případě zájmu o konkrétní vizualizace cena
-          domluvou.
+          Cena je pouze orientační a může se změnit podle náročnosti zakázky, množství zpracovaných místností a počtu úprav a
+          návrhů. <br>Při objednávce více místností nabízíme slevy. 
         </p>
 
         <table>
@@ -227,6 +226,13 @@
           <tbody>
 
             <!-- Vizualizace interiérů -->
+
+                        <!-- Zaměření -->
+            <tr class="category thick-top" >
+              <td style="color:#3c23adff">ZAMĚŘENÍ OBJEKTU</td>
+              <td>v Jihočeském kraji</td>
+              <td>zdarma</td>
+            </tr>
 
             <tr class="category no-thick-bottom" >
               <td style="color:#3c23adff">NÁVRH DISPOZICE A BAREVNÉ LADĚNÍ</td>
@@ -242,21 +248,21 @@
             </tr><!-- Vizualizace interiérů -->
             <tr class="category thick-top" >
               <td style="color:#3c23adff">ANIMACE</td>
-              <td>animace/průlety místností</td>
-              <td>1 000 Kč/místnost</td>
+              <td>animace a průlety místností</td>
+              <td>500 Kč/místnost</td>
             </tr><!-- Vizualizace interiérů -->
 
             </tr>
             <!-- Vizualizace interiérů -->
             <tr class="category no-thick-bottom" >
               <td style="color:#3c23adff">VIZUALIZACE INTERIÉRŮ</td>
-              <td>dětský pokoj</td>
+              <td>ložnice</td>
               <td>3 000 Kč</td>
             </tr>
 
             <tr >
               <td> </td>
-              <td>ložnice</td>
+              <td>jídelna</td>
               <td>3 000 Kč</td>
             </tr>
 
@@ -274,7 +280,7 @@
 
             <tr >
               <td> </td>
-              <td>jídelna</td>
+              <td>dětský pokoj</td>
               <td>3 000 Kč</td>
             </tr>
 
@@ -321,13 +327,13 @@
             <tr >
               <td></td>
               <td>rodinný dům</td>
-              <td>8 000 Kč</td>
+              <td>7 000 Kč</td>
             </tr>
 
             <tr >
               <td></td>
               <td>zahradní domek</td>
-              <td>6 000 Kč </td>
+              <td>5 000 Kč </td>
             </tr>
 
             <tr >
@@ -340,14 +346,6 @@
               <td></td>
               <td>širší okolí pro jednotlivé exteriérové vizualizace</td>
               <td>7 000 Kč </td>
-            </tr>
-
-
-            <!-- Zaměření -->
-            <tr class="category thick-top" >
-              <td style="color:#3c23adff">ZAMĚŘENÍ OBJEKTU</td>
-              <td>v Jihočeském kraji</td>
-              <td>zdarma</td>
             </tr>
 
           </tbody>
@@ -372,7 +370,7 @@
 
 
 
-    portfolio schovano v CSS->
+    <!-- portfolio schovano v CSS->
     	 
   <section class="wrapper style4 spotlights" id="portfolio" style="color: black;">
   <div class="inner">
@@ -434,51 +432,10 @@
       .carousel-button.left { left: -60px; }
       .carousel-button.right { right: -60px; }
 
-      .portfolio-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5em;
-        margin-bottom: 1.5em;
-        background: rgba(255, 255, 255, 0.12);
-        padding: 0.75em;
-        border-radius: 1.25em;
-        border: 1px solid rgba(0,0,0,0.08);
-      }
-
-      .portfolio-tab {
-        flex: 1 1 15%;
-        min-width: 10rem;
-        background: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0,0,0,0.1);
-        border-radius: 1em;
-        padding: 0.9em 1.1em;
-        font-weight: 700;
-        color: #1b1b1b;
-        text-align: center;
-        cursor: pointer;
-        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-      }
-
-      .portfolio-tab:hover {
-        background: rgba(255, 255, 255, 1);
-      }
-
-      .portfolio-tab.active {
-        background: #3c23adff;
-        color: white;
-        border-color: #3c23adff;
-      }
-
-      .portfolio-section {
-        display: none;
-      }
-
-      .portfolio-section.active {
-        display: block;
-      }
-
       .portfolio-row-title {
-        display: none;
+        margin: 1em 0 0.5em;
+        font-weight: bold;
+        font-size: 1.25em;
       }
 
       /* Lightbox */
@@ -501,44 +458,23 @@
         max-height: 90%;
       }
 
-      .lightbox-close,
-      .lightbox-prev,
-      .lightbox-next {
+      .lightbox-close, .lightbox-prev, .lightbox-next {
         position: absolute;
         color: white;
         font-size: 2em;
         cursor: pointer;
         user-select: none;
         z-index: 10000;
-        width: 2.8em;
-        height: 2.8em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.35);
-        border-radius: 50%;
-        transition: background 0.2s ease;
       }
 
-      .lightbox-close:hover,
-      .lightbox-prev:hover,
-      .lightbox-next:hover {
-        background: rgba(255, 255, 255, 0.15);
-      }
-
-      .lightbox-close { top: calc(20px + 4em); right: 20px; }
+      .lightbox-close { top: 20px; right: 40px; }
       .lightbox-prev { top: 50%; left: 20px; transform: translateY(-50%); }
       .lightbox-next { top: 50%; right: 20px; transform: translateY(-50%); }
     </style>
 	  
-    <div class="portfolio-tabs">
-      <button class="portfolio-tab active" data-section="portfolio1">NÁVRHY INTERIÉRU A EXTERIÉRU</button>
-      <button class="portfolio-tab" data-section="portfolio2">3D VIZUALIZACE</button>
-      <button class="portfolio-tab" data-section="portfolio3">ANIMACE</button>
-      <button class="portfolio-tab" data-section="portfolio4">ZACHYCENÍ DETAILŮ</button>
-    </div>
-    <div class="portfolio-section active" id="portfolio1-section">
-      <div class="carousel-container">
+    <-- ŘÁDEK 1 ->
+    <div class="portfolio-row-title" data-aos="fade-right" id="portfolio1" style="color:#639a6d">NÁVRHY INTERIÉRU A EXTERIÉRU</div>
+    <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarouselCenter('carouselTrackImg1', -1)">
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none"/></svg>
       </button>
@@ -556,9 +492,9 @@
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none"/></svg>
       </button>
     </div>
-  </div>
 
-  <div class="portfolio-section" id="portfolio2-section">
+    <-- ŘÁDEK 2 ->
+    <div class="portfolio-row-title" data-aos="fade-right" id="portfolio2" style="color:#65a169">3D VIZUALIZACE</div>
     <div class="carousel-container" >
       <button class="carousel-button left" onclick="scrollCarouselCenter('carouselTrackImg2', -1)">
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none"/></svg>
@@ -577,9 +513,9 @@
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none"/></svg>
       </button>
     </div>
-  </div>
 
-  <div class="portfolio-section" id="portfolio3-section">
+    <-- ŘÁDEK 3 ->
+    <div class="portfolio-row-title" data-aos="fade-right" id="portfolio3" style="color: #67a865">ANIMACE</div>
     <div class="carousel-container" >
       <button class="carousel-button left" onclick="scrollCarouselCenter('carouselTrackVid1', -1)">
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none"/></svg>
@@ -595,9 +531,9 @@
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none"/></svg>
       </button>
     </div>
-  </div>
 
-  <div class="portfolio-section" id="portfolio4-section">
+    <-- ŘÁDEK 4 ->
+    <div class="portfolio-row-title" data-aos="fade-right" style="color:#69af61">ZACHYCENÍ DETAILŮ</div>
     <div class="carousel-container">
       <button class="carousel-button left" onclick="scrollCarouselCenter('carouselTrackVid2', -1)">
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="16,4 8,24 16,44" stroke="black" stroke-width="3" fill="none"/></svg>
@@ -613,14 +549,13 @@
         <svg width="24" height="48" viewBox="0 0 24 48"><polyline points="8,4 16,24 8,44" stroke="black" stroke-width="3" fill="none"/></svg>
       </button>
     </div>
-  </div>
 
-    <div id="lightbox" onclick="closeLightbox()">
-      <span class="lightbox-close" role="button" aria-label="Zavřít" onclick="event.stopPropagation(); closeLightbox()">×</span>
-      <span class="lightbox-prev" role="button" aria-label="Předchozí" onclick="event.stopPropagation(); changeLightbox(-1)">❮</span>
-      <span class="lightbox-next" role="button" aria-label="Další" onclick="event.stopPropagation(); changeLightbox(1)">❯</span>
-      <img id="lightbox-img" style="display:none;" onclick="event.stopPropagation()" />
-      <video id="lightbox-video" controls style="display:none;" onclick="event.stopPropagation()"></video>
+    <div id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">×</span>
+      <span class="lightbox-prev" onclick="changeLightbox(-1)">❮</span>
+      <span class="lightbox-next" onclick="changeLightbox(1)">❯</span>
+      <img id="lightbox-img" style="display:none;" />
+      <video id="lightbox-video" controls style="display:none;"></video>
     </div>
 
    <script>
@@ -698,36 +633,19 @@
         });
       });
     });
-
-    const portfolioTabs = document.querySelectorAll('.portfolio-tab');
-    const portfolioSections = document.querySelectorAll('.portfolio-section');
-
-    portfolioTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        portfolioTabs.forEach(other => other.classList.remove('active'));
-        portfolioSections.forEach(section => section.classList.remove('active'));
-
-        tab.classList.add('active');
-        const targetSection = document.getElementById(`${tab.dataset.section}-section`);
-        if (targetSection) {
-          targetSection.classList.add('active');
-        }
-      });
-    });
-
-    document.addEventListener('keydown', event => {
-      const lightbox = document.getElementById('lightbox');
-      if (lightbox.style.display === 'flex' && event.key === 'Escape') {
-        closeLightbox();
-      }
-    });
-  });
+  });  
     </script>
   </div>
-</section>
+</section> 
+-->
 
-  <section class="wrapper style4 fade-up" id="four" style="color: black;">
-    <div class="inner">
+    <!-- Sekce Kontakt -->
+    <section class="wrapper style4 fade-up" id="four" style="color: black;">
+      <div class="inner">
+        <h2 style="color: #3c23adff;">KONTAKT</h2>
+
+        <div class="split style1">
+
           <section>
             <form action="https://formspree.io/f/mzzvbeyy" id="contact-form" method="POST" data-aos="fade-right">
               <div class="fields">
