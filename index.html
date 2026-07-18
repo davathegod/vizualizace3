@@ -682,7 +682,7 @@ document.getElementById('contact-form').addEventListener('submit', function () {
         <div class="split style1">
 
           <section>
-            <form action="https://formspree.io/f/mzzvbeyy" id="contact-form" method="POST" data-aos="fade-right"  onsubmit="dataLayer.push({'event':'form_submit'});">
+            <form action="odeslat.php" id="contact-form" method="POST" data-aos="fade-right">
               <div class="fields">
                 <div class="field half">
                   <label for="name"
@@ -690,11 +690,11 @@ document.getElementById('contact-form').addEventListener('submit', function () {
                   <input id="name" name="name" type="text"
                     style="color: black; background-color: white; border: 1px solid black;" />
                 </div>
-
+                
                 <div class="field half">
                   <label for="email"
                     style="color:black ; background: transparent !important ; font-size: 1.3em;">Email</label>
-                  <input id="email" name="email" type="text"
+                  <input id="email" name="email" type="email"
                     style="color: black; background-color: white; border: 1px solid black;" />
                 </div>
 
