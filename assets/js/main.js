@@ -238,3 +238,7 @@
 		});
 
 })(jQuery);
+
+dataLayer.push({
+  event: 'form_submit'
+});

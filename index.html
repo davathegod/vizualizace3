@@ -682,7 +682,7 @@ document.getElementById('contact-form').addEventListener('submit', function () {
         <div class="split style1">
 
           <section>
-            <form action="https://formspree.io/f/mzzvbeyy" id="contact-form" method="POST" data-aos="fade-right">
+            <form action="https://formspree.io/f/mzzvbeyy" id="contact-form" method="POST" data-aos="fade-right"  onsubmit="dataLayer.push({'event':'form_submit'});">
               <div class="fields">
                 <div class="field half">
                   <label for="name"
@@ -948,6 +948,14 @@ document.getElementById('contact-form').addEventListener('submit', function () {
     });
   </script>
 
+<script>
+document.querySelector('form').addEventListener('submit', function(){
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        event: 'form_submit'
+    });
+});
+</script>
 
 </body>
 
