@@ -4046,6 +4046,7 @@ input, select, textarea {
   align-items: center;
   background: none;
   border: none;
+  border-color: transparent;
   cursor: pointer;
   position: relative;
  
@@ -4053,6 +4054,16 @@ input, select, textarea {
 	box-sizing: border-box;
 	gap: 0.5em;
 	transform: none;
+}
+
+#mobile-menu-toggle:hover,
+#mobile-menu-toggle:focus,
+#mobile-menu-toggle:active {
+  border: none;
+  border-color: transparent;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
 }
 
 #mobile-menu-toggle .bar {

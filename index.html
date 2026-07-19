@@ -23,25 +23,25 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
-<!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-            'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5R7Q87H6');</script>
-    <!-- End Google Tag Manager -->
+  <!-- End Google Tag Manager -->
 
 </head>
 
 <body class="is-preload">
 
   <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R7Q87H6" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R7Q87H6" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <header id="mobile-header">
     <div class="inner">
@@ -52,7 +52,7 @@
           </a>
           <span style="color: white; font-size: 1.2em; font-weight: bold;">PROvizualizace</span>
         </div>
-        <button id="mobile-menu-toggle" aria-label="Otevřít menu">
+        <button id="mobile-menu-toggle" aria-label="Otevřít menu" style="border: none; border-color: transparent; outline: none; background: transparent;">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -377,9 +377,7 @@
     <section class="wrapper style4 spotlights" id="three" style="color: black;">
       <div class="inner">
         <h2 style="color: #3c23adff;">O NÁS</h2>
-        <p style="color: black;">Jsme 2 studenti VUT fakulty stavební se zaměřením na pozemní stavby. Máme zkušenosti s
-          projektováním,
-          vizualizacemi a naceňováním. Spolupracujeme s inženýry z praxe s letitou zkušeností pro záruku kvality.
+        <p style="color: black;"> Jsme tým mladých lidí, kteří se zabývají vizualizacemi a naceňováním. <br>Spolupracujeme s inženýry z praxe s letitou zkušeností pro záruku kvality.
           Od první zakázky se zdokonalujeme a každá další je pro nás výzvou, <br>kterou se snažíme zpracovat v co
           nejlepší
           kvalitě.
@@ -674,21 +672,26 @@
               <div class="fields">
                 <div class="field half">
                   <label for="name"
-                    style="color:black ; background: transparent !important ; font-size: 1.3em;">Jméno</label>
+                    style="color:black ; background: transparent !important ; font-size: 1.3em; display: inline-block; margin: 0 0 0.2em 0;">Jméno</label>
+                  <label
+                    style="color:#5f6368; display: inline-block; margin: 0 0 0.2em 1.3em; displaalign-right"> *nepovinné</label>
                   <input id="name" name="name" type="text"
                     style="color: black; background-color: white; border: 1px solid black;" />
                 </div>
 
                 <div class="field half">
                   <label for="email"
-                    style="color:black ; background: transparent !important ; font-size: 1.3em;">Email</label>
+                    style="color:black ; background: transparent !important ;display: inline-block; margin: 0 0 0.2em 0.3em; font-size: 1.3em;">Email</label>
+                  <label style="color:#5f6368; display: inline-block; margin: 0 0 0.2em 1.3em;">*pro zpětnou
+                    vazbu</label>
                   <input id="email" name="email" type="email"
                     style="color: black; background-color: white; border: 1px solid black;" />
                 </div>
 
                 <div class="field">
                   <label for="message"
-                    style="color: black; background: transparent !important ; font-size: 1.3em;">Zpráva</label>
+                    style="color: black; background: transparent !important ; font-size: 1.3em; display: inline-block; margin: 0 0 0.2em 0.3em;">Zpráva</label>
+                    <label style="color:#5f6368; display: inline-block; margin: 0 0 0.2em 1.3em;">*stručně popište svůj projekt</label>
                   <textarea id="message" name="message" rows="5"
                     style="color: black; background-color: white; border: 1px solid black;"></textarea>
                 </div>
