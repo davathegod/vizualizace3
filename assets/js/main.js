@@ -239,3 +239,12 @@
 
 })(jQuery);
 
+
+// Místo document.getElementById... použijeme přímé napojení
+var form = document.getElementById('contact-form');
+
+// Přidáme listener až poté
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Toto tu musí zůstat
+  // ... zbytek kódu ...
+});
